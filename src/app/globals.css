@@ -16,3 +16,9 @@
   --color-flame-100: #FFBA07;
   --color-flame-white: #FFFFFF;
 }
+
+.bg-zigzag-pattern {
+  background-image: url("/pattern.svg");
+  background-repeat: repeat;
+  background-size: 80px 80px;
+}

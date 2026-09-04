@@ -13,7 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className="bg-flame-950 bg-zigzag-pattern min-h-screen text-flame-white">
+        {children}
+      </body>
     </html>
   );
 }
