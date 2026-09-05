@@ -1,3 +1,5 @@
+"use client";
+
 import { PROJECTS_DATA } from "@/data/projects";
 import ProjectCard from "../ui/projectCard";
 

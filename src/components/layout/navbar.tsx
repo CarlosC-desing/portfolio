@@ -76,8 +76,8 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Menú Desktop intacto en estilos */}
-      <nav className="hidden sm:flex bg-flame-500 rounded-[100px] w-[1318px] h-[100px] items-center justify-end px-10">
-        <ul className="flex gap-5 text-flame-900 font-black uppercase">
+      <nav className="hidden sm:flex bg-flame-500 rounded-[100px] w-[1318px] h-[100px] items-center justify-end px-20">
+        <ul className="flex gap-5 text-flame-900 font-black text-2xl uppercase">
           <li>
             <Link href="#about_me">About Me</Link>
           </li>

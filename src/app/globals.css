@@ -21,8 +21,10 @@
   0% {
     transform: translateX(-100%);
   }
+
   100% {
-    transform: translateX(200%);
+    transform: translateX(350%);
+    /* Aumentado de 200% a 350% para cubrir los 150px */
   }
 }
 
