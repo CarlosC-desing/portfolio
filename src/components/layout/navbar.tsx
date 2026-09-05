@@ -15,7 +15,7 @@ export default function Navbar() {
           src="/logo.png"
           alt="Imagen con diferentes tamaños"
           fill
-          className="object-cover p-1"
+          className="p-1"
           sizes="(max-width: 768px) 192px, 384px"
         />
       </div>
@@ -24,12 +24,13 @@ export default function Navbar() {
         type="button"
         className="relative sm:hidden w-[80px] h-[40px] bg-flame-500 rounded-[10px]"
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         <Image
-          src="/image.png"
+          src={isOpen ? "/svg/xIcon.svg" : "/svg/hamburgerIcon.svg"}
           alt="Imagen secundaria"
           fill
-          className="object-cover px-4 py-2"
+          className="px-4 p-1.5"
           sizes="50px"
         />
       </button>
@@ -44,27 +45,27 @@ export default function Navbar() {
             className="sm:hidden absolute top-20 right-3 mt-5"
           >
             <ul className="text-[13px] flex flex-col gap-1 uppercase font-bold">
-              <li>
+              <li className="hover:text-flame-500 hover:border-b hover:border-b-flame-500">
                 <Link href="#about_me" onClick={() => setIsOpen(false)}>
                   About Me
                 </Link>
               </li>
-              <li>
+              <li className="hover:text-flame-500 hover:border-b hover:border-b-flame-500">
                 <Link href="#projects" onClick={() => setIsOpen(false)}>
                   Projects
                 </Link>
               </li>
-              <li>
+              <li className="hover:text-flame-500 hover:border-b hover:border-b-flame-500">
                 <Link href="#technologies" onClick={() => setIsOpen(false)}>
                   Technologies
                 </Link>
               </li>
-              <li>
+              <li className="hover:text-flame-500 hover:border-b hover:border-b-flame-500">
                 <Link href="#studies" onClick={() => setIsOpen(false)}>
                   Studies
                 </Link>
               </li>
-              <li>
+              <li className="hover:text-flame-500 hover:border-b hover:border-b-flame-500">
                 <Link href="#contact" onClick={() => setIsOpen(false)}>
                   Contact
                 </Link>

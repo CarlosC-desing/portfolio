@@ -16,7 +16,7 @@ export default function AnimatedBackground({
         transition: {
           repeat: Infinity,
           ease: "linear",
-          duration: 2.5, // Menos segundos = movimiento más rápido
+          duration: 2.5,
         },
       }}
     >
