@@ -2,41 +2,98 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="flex">
-      <div className="relative w-48 h-48 md:w-96 md:h-96">
+    <header className="py-10 flex justify-between items-center">
+      <div className="relative w-[50px] h-[50px] md:w-[80px] md:h-[80px]">
         <Image
-          src="/mi-imagen.jpg"
+          src="/logo.png"
           alt="Imagen con diferentes tamaños"
           fill
-          className="object-cover"
+          className="object-cover p-1"
           sizes="(max-width: 768px) 192px, 384px"
         />
       </div>
 
-      <div className="sm:hidden"></div>
+      <button
+        type="button"
+        className="relative sm:hidden w-[80px] h-[40px] bg-flame-500 rounded-[10px]"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <Image
+          src="/image.png"
+          alt="Imagen secundaria"
+          fill
+          className="object-cover px-4 py-2"
+          sizes="50px"
+        />
+      </button>
 
-      <nav className="hidden sm:flex">
-        <ul>
+      {/* Menú Móvil con AnimatePresence para despliegue suave */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="sm:hidden absolute top-20 right-3 mt-5"
+          >
+            <ul className="text-[13px] flex flex-col gap-1 uppercase font-bold">
+              <li>
+                <Link href="#about_me" onClick={() => setIsOpen(false)}>
+                  About Me
+                </Link>
+              </li>
+              <li>
+                <Link href="#projects" onClick={() => setIsOpen(false)}>
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="#technologies" onClick={() => setIsOpen(false)}>
+                  Technologies
+                </Link>
+              </li>
+              <li>
+                <Link href="#studies" onClick={() => setIsOpen(false)}>
+                  Studies
+                </Link>
+              </li>
+              <li>
+                <Link href="#contact" onClick={() => setIsOpen(false)}>
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+
+      {/* Menú Desktop intacto en estilos */}
+      <nav className="hidden sm:flex bg-flame-500 rounded-[100px] w-[1318px] h-[100px] items-center justify-end px-10">
+        <ul className="flex gap-5 text-flame-900 font-black uppercase">
           <li>
-            <Link href="">About Me</Link>
+            <Link href="#about_me">About Me</Link>
           </li>
           <li>
-            <Link href="">Projects</Link>
+            <Link href="#projects">Projects</Link>
           </li>
           <li>
-            <Link href="">Technologies</Link>
+            <Link href="#technologies">Technologies</Link>
           </li>
           <li>
-            <Link href="">Studies</Link>
+            <Link href="#studies">Studies</Link>
           </li>
           <li>
-            <Link href="">Contact</Link>
+            <Link href="#contact">Contact</Link>
           </li>
         </ul>
       </nav>
     </header>
-  )
+  );
 }
