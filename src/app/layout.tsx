@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="bg-black min-h-screen text-flame-white">
+      <body className="bg-black min-h-screen">
         <AnimatedBackground>
           <Navbar />
           {children}
