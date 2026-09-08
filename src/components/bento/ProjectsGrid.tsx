@@ -2,7 +2,7 @@
 
 import { useProjects } from "@/data/projects";
 import { useTranslation } from "@/providers/LanguageContext";
-import ProjectCard from "../ui/projectCard";
+import ProjectCard from "../ui/ProjectCard";
 import { motion } from "framer-motion";
 
 const containerVariants = {

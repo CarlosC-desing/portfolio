@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import AnimatedBackground from "@/components/animatedBackground";
-import Navbar from "@/components/layout/navbar";
+import AnimatedBackground from "@/components/AnimatedBackground";
+import Navbar from "@/components/layout/Navbar";
 import LenisProvider from "@/providers/LenisProvider";
 import { LanguageProvider } from "@/providers/LanguageContext";
 

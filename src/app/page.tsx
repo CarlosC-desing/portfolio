@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import TitleBadges from "@/components/ui/titlesBadges";
+import TitleBadges from "@/components/ui/TitlesBadges";
 import { motion } from "framer-motion";
-import EventGrid from "@/components/bento/projectsGrid";
+import EventGrid from "@/components/bento/ProjectsGrid";
 import { useTranslation } from "@/providers/LanguageContext";
+import TechnologiesGrid from "@/components/bento/TechnologiesGrid";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -115,6 +116,7 @@ export default function Home() {
             <h2 id="tech-heading">
               <TitleBadges title={t.technologies.title} />
             </h2>
+            <TechnologiesGrid />
           </header>
         </motion.div>
       </section>

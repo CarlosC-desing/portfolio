@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { PROJECT_COLOR_CLASS, type ProjectColor } from "@/data/projects";
 import { cn } from "@/lib/utils";
-import ButtonShine from "./buttonShine";
+import ButtonShine from "./ButtonShine";
 
 interface Props {
   color: ProjectColor;
