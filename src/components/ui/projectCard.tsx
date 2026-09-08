@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { PROJECT_COLOR_CLASS, type ProjectColor } from "@/data/projects";
+import { cn } from "@/lib/utils";
 import ButtonShine from "./buttonShine";
+
 interface Props {
-  color: string;
+  color: ProjectColor;
   title: string;
   description: string;
   img: string;
@@ -25,9 +28,14 @@ export default function ProjectCard({
   codeText = "Código",
 }: Props) {
   return (
-    <article className={`w-full h-[450px] rounded-xl p-4 transition-all bg-flame-850 ${color} flex flex-col items-center gap-2`}>
+    <article
+      className={cn(
+        "w-full h-full rounded-xl p-4 transition-all flex flex-col items-center gap-2",
+        PROJECT_COLOR_CLASS[color],
+      )}
+    >
       <h3 className="text-xl font-black text-flame-white uppercase">{title}</h3>
-      <div className="border">
+      <div>
         <Image
           className="rounded-xl"
           src={img}
@@ -37,7 +45,7 @@ export default function ProjectCard({
         />
       </div>
 
-      <p className="text-flame-white text-[15px] text-justify">
+      <p className="text-flame-white text-[15px] text-justify italic">
         {description}
       </p>
 
