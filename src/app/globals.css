@@ -14,7 +14,7 @@
   --color-flame-100: #ffba07;
   --color-flame-white: #ffffff;
 
-  --animate-shine: shine 2.3s infinite linear;
+  --animate-shine: shine 1.5s infinite linear;
 }
 
 @keyframes shine {
@@ -24,7 +24,6 @@
 
   100% {
     transform: translateX(350%);
-    /* Aumentado de 200% a 350% para cubrir los 150px */
   }
 }
 

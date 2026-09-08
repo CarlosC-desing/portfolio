@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Personal Portfolio — Web & Software Engineering
 
-## Getting Started
+> Un portafolio web moderno, modular e interactivo enfocado en rendimiento (60 FPS), micro-interacciones pulidas y una arquitectura de componentes escalable.
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.0-0055FF?style=flat-square&logo=framer)](https://www.framer.com/motion/)
+[![Biome](https://img.shields.io/badge/Biome-Linter%20%26%20Formatter-60A5FA?style=flat-square)](https://biomejs.dev/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Proceso de Diseño: De Wireframes a Alta Fidelidad
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A diferencia de las plantillas prefabricadas, este proyecto fue concebido y construido totalmente desde cero, siguiendo un proceso de diseño enfocado en la experiencia de usuario (UX):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Wireframing & Layout (Figma):** Definición de la jerarquía de contenidos, distribución del Bento Grid de proyectos y estructura Mobile-First.
+2. **Diseño de Alta Fidelidad & Branding (Figma & Illustrator):** Elección de paleta de colores oscuros (`neutral-950`), guía tipográfica y exportación de assets vectoriales (SVG) optimizados.
+3. **Prototipado Interactivo:** Pruebas de flujo y transiciones visuales antes de tirar la primera línea de código.
 
-## Learn More
+> 📁 **[Ver Lienzo y Prototipo en Figma](TU_LINK_DE_FIGMA_AQUI)** *(Opcional: coloca un enlace directo a tu archivo de Figma público)*
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚡ Tech Stack & Arquitectura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Framework:** [Next.js](https://nextjs.org/) (App Router)
+* **Lenguaje:** [TypeScript](https://www.typescriptlang.org/) (Type Safety)
+* **Estilos:** [Tailwind CSS](https://tailwindcss.com/) (Atomic Design)
+* **Animaciones:** [Framer Motion](https://www.framer.com/motion/) (Efectos de física Spring, Staggering y Transformaciones de GPU)
+* **Smooth Scroll:** [Lenis Scroll](https://lenis.darkroom.engineering/) (Desplazamiento suave hidraúlico)
+* **Herramientas de Desarrollo:** [Biome](https://biomejs.dev/) para linting/formatting y `bun` / `pnpm` como gestor de dependencias.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧩 Componentes Reutilizables & Animaciones Destacadas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Bento Grid con Física "Lego Fall":** Animaciones de caída progresiva con efectos de rebote (`spring`) calibrando `stiffness` y `damping` para simular impacto con el suelo.
+* **Fondo SVG Interactivo:** Patrón de líneas dinámico que reacciona a las coordenadas `(x, y)` del cursor mediante `useMotionValue` y `useSpring` sin comprometer la GPU.
+* **Navbar Flotante / Glassmorphism:** Barra fija con desenfoque de fondo (`backdrop-blur-md`) y animación de entrada suave.
+* **Atomic Design UI:** Librería interna de componentes reutilizables (`Button`, `Card`, `Badge`) con la utilidad `cn()` (`clsx` + `tailwind-merge`) para evitar conflictos de clases.
+
+---
+
+## 🛠️ Instalación y Ejecución Local
+
+1. **Clonar el repositorio:**
+   ```fish
+   git clone [https://github.com/tu-usuario/tu-repo-portfolio.git](https://github.com/tu-usuario/tu-repo-portfolio.git)
+   cd tu-repo-portfolio 
+   ```
+
+## Instalar Dependencias
+2. **Instalar dependencias:**
+    ```fish
+    bun install o pnpm install
+    ```
+
+## Iniciar el servidor de desarrollo
+2. **Instalar dependencias:**
+    ```fish
+    bun dev o pnpm dev
+    ```
+
+2. **Servidor:**
+    ```fish
+    Abrir http://localhost:3000 en el navegador.
+    ```    

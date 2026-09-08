@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "technologies": "Tecnologías",
+    "studies": "Estudios",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Carlos Canelon",
+    "role": "Creative FullStack Developer",
+    "description": "Me apasiona conectar el diseño de UI con arquitecturas sólidas—siempre garantizando la calidad del código, el rendimiento y el detalle visual de principio a fin.",
+    "location": "Yaritagua - Venezuela",
+    "githubBtn": "Github"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "demoBtn": "Ver Demo",
+    "codeBtn": "Ver Código",
+    "barberly": {
+      "title": "Barberly",
+      "description": "Un SaaS para barberías donde los clientes pueden reservar sus citas, adjuntar su método de pago y esperar la confirmación de la barbería. Desarrollado con la metodología SDD."
+    },
+    "satrc": {
+      "title": "SATRC",
+      "description": "Sistema de automatización y agilización de trámites para el Registro Civil. Desarrollado con PHP, diseñado para gestionar solicitudes, optimizar tiempos de respuesta y digitalizar el flujo documental institucional."
+    },
+    "weyland": {
+      "title": "Weyland-Yutani SPA",
+      "description": "Single Page Application temática inspirada en el universo de Alien, enfocada en rendimiento y UI personalizada."
+    },
+    "weyland2": {
+      "title": "Weyland-Yutani v2",
+      "description": "Segunda iteración de la plataforma Weyland con integraciones adicionales de simulación de datos e interfaz futurista."
+    }
+  },
+  "technologies": {
+    "title": "Tecnologías",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "environment": "Entorno y Automatización",
+    "design": "Creatividad y Diseño UI/UX"
+  },
+  "studies": {
+    "title": "Estudios",
+    "tsu": {
+      "degree": "Técnico Superior en Ingeniería Informática",
+      "institution": "Universidad Politécnica Territorial de Yaracuy 'Arístides Bastidas'"
+    },
+    "fullstack": {
+      "degree": "Full Stack Open Developer",
+      "institution": "Universidad de Helsinki"
+    },
+    "cadif1": {
+      "degree": "Desarrollador Web Junior",
+      "institution": "Academia CADIF1"
+    },
+    "coursera": {
+      "degree": "Fundamentos del Diseño UX",
+      "institution": "Coursera"
+    },
+    "cisco": {
+      "degree": "Fundamentos de Ciberseguridad",
+      "institution": "Cisco - NetAcad"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¡DEJA TUS DATOS O ENVÍAME UN EMAIL!",
+    "form": {
+      "name": "NOMBRE",
+      "phone": "TLF",
+      "email": "EMAIL",
+      "submit": "ENVIAR"
+    }
+  },
+  "footer": {
+    "text": ""
+  }
+}

@@ -41,4 +41,32 @@ export const PROJECTS_DATA: Project[] = [
       github: "https://github.com/CarlosC-desing/weyland-yutani-spa",
     },
   },
+  {
+    id: "weyland-yutani2",
+    title: "Weyland-Yutani SPA",
+    description: "Single Page Application temática inspirada en el universo de Alien, enfocada en rendimiento y UI personalizada.",
+    img: "/projects/weyland.png",
+    stack: [
+      "/svg/react.svg",
+      "/svg/typescript.svg",
+      "/svg/tailwind.svg",
+    ],
+    links: {
+      github: "https://github.com/CarlosC-desing/weyland-yutani-spa",
+    },
+  },
+  {
+    id: "weyland-yutani3",
+    title: "Weyland-Yutani SPA",
+    description: "Single Page Application temática inspirada en el universo de Alien, enfocada en rendimiento y UI personalizada.",
+    img: "/projects/weyland.png",
+    stack: [
+      "/svg/react.svg",
+      "/svg/typescript.svg",
+      "/svg/tailwind.svg",
+    ],
+    links: {
+      github: "https://github.com/CarlosC-desing/weyland-yutani-spa",
+    },
+  },
 ];

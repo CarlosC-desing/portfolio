@@ -1,6 +1,5 @@
 import Image from "next/image";
 import ButtonShine from "./buttonShine";
-
 interface Props {
   color: string;
   title: string;
@@ -11,9 +10,20 @@ interface Props {
     demo?: string;
     github?: string;
   };
+  demoText?: string;
+  codeText?: string;
 }
 
-export default function ProjectCard({ color, title, description, img, stack, links }: Props) {
+export default function ProjectCard({
+  color,
+  title,
+  description,
+  img,
+  stack,
+  links,
+  demoText = "Demo",
+  codeText = "Código",
+}: Props) {
   return (
     <article className={`w-full h-[450px] rounded-xl p-4 transition-all bg-flame-850 ${color} flex flex-col items-center gap-2`}>
       <h3 className="text-xl font-black text-flame-white uppercase">{title}</h3>
@@ -53,13 +63,13 @@ export default function ProjectCard({ color, title, description, img, stack, lin
       <div className="flex gap-4 mt-auto">
         {links.demo && (
           <ButtonShine
-            title="Demo"
+            title={demoText}
             link={links.demo}
           />
         )}
         {links.github && (
           <ButtonShine
-            title="github"
+            title={codeText}
             link={links.github}
           />
         )}

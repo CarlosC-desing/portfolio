@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "about": "About Me",
+    "projects": "Projects",
+    "technologies": "Technologies",
+    "studies": "Studies",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "Carlos Canelon",
+    "role": "Creative FullStack Developer",
+    "description": "I'm passionate about bridging UI design with solid architectures—always ensuring code quality, performance, and visual detail from start to finish.",
+    "location": "Yaritagua - Venezuela",
+    "githubBtn": "Github"
+  },
+  "projects": {
+    "title": "Projects",
+    "demoBtn": "Live Demo",
+    "codeBtn": "View Code",
+    "barberly": {
+      "title": "Barberly",
+      "description": "A barbershop SaaS platform where clients can book appointments, attach their payment methods, and await shop confirmation. Built using the SDD methodology."
+    },
+    "satrc": {
+      "title": "SATRC",
+      "description": "Civil Registry process automation system. Built with PHP, designed to manage requests, optimize response times, and digitize institutional document workflows."
+    },
+    "weyland": {
+      "title": "Weyland-Yutani SPA",
+      "description": "Alien universe-inspired thematic Single Page Application focusing on performance and custom UI."
+    },
+    "weyland2": {
+      "title": "Weyland-Yutani v2",
+      "description": "Second iteration of the Weyland platform featuring additional data simulation integrations and futuristic UI."
+    }
+  },
+  "technologies": {
+    "title": "Technologies",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "environment": "Environment & Automation",
+    "design": "Creativity & UI/UX Design"
+  },
+  "studies": {
+    "title": "Education",
+    "tsu": {
+      "degree": "Associate Degree in Computer Engineering",
+      "institution": "Yaracuy Territorial Polytechnic University 'Arístides Bastidas'"
+    },
+    "fullstack": {
+      "degree": "Full Stack Open Developer",
+      "institution": "University of Helsinki"
+    },
+    "cadif1": {
+      "degree": "Junior Web Developer",
+      "institution": "CADIF1 Academy"
+    },
+    "coursera": {
+      "degree": "Foundations of UX Design",
+      "institution": "Coursera"
+    },
+    "cisco": {
+      "degree": "Cybersecurity Essentials",
+      "institution": "Cisco - NetAcad"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "LEAVE YOUR DETAILS OR SEND ME AN EMAIL!",
+    "form": {
+      "name": "NAME",
+      "phone": "PHONE",
+      "email": "EMAIL",
+      "submit": "SEND"
+    }
+  },
+  "footer": {
+    "text": ""
+  }
+}
