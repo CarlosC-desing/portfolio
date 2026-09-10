@@ -5,7 +5,7 @@ import TitleBadges from "@/components/ui/TitlesBadges";
 import { motion } from "framer-motion";
 import EventGrid from "@/components/bento/ProjectsGrid";
 import { useTranslation } from "@/providers/LanguageContext";
-import TechnologiesGrid from "@/components/bento/TechnlogiesGrid";
+import TechnologiesGrid from "@/components/bento/TechnologiesGrid";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 30 },

@@ -1,10 +1,11 @@
+// src/data/technologies.ts
 import { IconType } from "react-icons";
 import {
   SiJavascript,
   SiTypescript,
   SiNextdotjs,
   SiHtml5,
-  SiCss, // Si tu versión falla con SiCss3, usa SiCss
+  SiCss,
   SiTailwindcss,
   SiReact,
   SiSass,
@@ -15,7 +16,6 @@ import {
   SiArchlinux,
   SiN8N,
   SiFigma,
-  SiAdobeillustrator, // Si falla, reemplaza por SiAdobeillustrator o SiAdobe
 } from "react-icons/si";
 import { FaLinux } from "react-icons/fa";
 
@@ -38,142 +38,56 @@ export type TechnologiesId =
   | "Adobe Illustrator";
 
 export type TechnologiesColor =
+  | "flame-300"
   | "flame-400"
   | "flame-500"
   | "flame-600"
-  | "flame-700";
+  | "flame-700"
+  | "flame-800";
 
 export const PROJECT_COLOR_CLASS: Record<TechnologiesColor, string> = {
+  "flame-300": "bg-flame-300",
   "flame-400": "bg-flame-400",
   "flame-500": "bg-flame-500",
   "flame-600": "bg-flame-600",
   "flame-700": "bg-flame-700",
+  "flame-800": "bg-flame-800",
 };
 
 export interface TechnologiesMeta {
   id: TechnologiesId;
   title: string;
   color: TechnologiesColor;
-  icons: IconType[];
-  gridSpan: string;
+  icons?: IconType[];
+  iconColor?: string;
+  iconClassName?: string | string[];
+  imageSrc?: string;
 }
 
-export const TECHNOLOGIES_DATA: TechnologiesMeta[] = [
-  // FrontEnd
-  {
-    id: "JavaScript",
-    title: "JavaScript",
-    color: "flame-700",
-    icons: [SiJavascript],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "TypeScript",
-    title: "TypeScript",
-    color: "flame-600",
-    icons: [SiTypescript],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "Next.js",
-    title: "Next.js",
-    color: "flame-500",
-    icons: [SiNextdotjs],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "HTML5",
-    title: "HTML5",
-    color: "flame-700",
-    icons: [SiHtml5],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "CSS3",
-    title: "CSS3",
-    color: "flame-600",
-    icons: [SiCss3],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "Tailwind",
-    title: "Tailwind",
-    color: "flame-500",
-    icons: [SiTailwindcss],
-    gridSpan: "col-span-1 row-span-3",
-  },
-  {
-    id: "React",
-    title: "React",
-    color: "flame-700",
-    icons: [SiReact],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "Sass",
-    title: "Sass",
-    color: "flame-600",
-    icons: [SiSass],
-    gridSpan: "col-span-1 row-span-1",
-  },
+export const FRONTEND_DATA: TechnologiesMeta[] = [
+  { id: "JavaScript", title: "JavaScript", color: "flame-800", icons: [SiJavascript], iconColor: "text-[#F7DF1E]" },
+  { id: "TypeScript", title: "TypeScript", color: "flame-600", icons: [SiTypescript], iconColor: "text-[#3178C6]" },
+  { id: "Next.js", title: "Next.js", color: "flame-500", icons: [SiNextdotjs], iconColor: "text-black" },
+  { id: "HTML5", title: "HTML5", color: "flame-800", icons: [SiHtml5], iconColor: "text-[#E34F26]" },
+  { id: "CSS3", title: "CSS3", color: "flame-600", icons: [SiCss], iconColor: "text-[#1572B6]" },
+  { id: "Tailwind", title: "Tailwind", color: "flame-500", icons: [SiTailwindcss], iconColor: "text-[#06B6D4]" },
+  { id: "React", title: "React", color: "flame-800", icons: [SiReact], iconColor: "text-[#61DAFB]" },
+  { id: "Sass", title: "Sass", color: "flame-600", icons: [SiSass], iconColor: "text-[#CC6699]" },
+];
 
-  // BackEnd
-  {
-    id: "MongoDB",
-    title: "MongoDB",
-    color: "flame-500",
-    icons: [SiMongodb],
-    gridSpan: "col-span-1 row-span-2",
-  },
-  {
-    id: "Express",
-    title: "Express",
-    color: "flame-500",
-    icons: [SiExpress],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "Node.js",
-    title: "Node.js",
-    color: "flame-500",
-    icons: [SiNodedotjs],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "PostgreSQL",
-    title: "PostgreSQL",
-    color: "flame-500",
-    icons: [SiPostgresql],
-    gridSpan: "col-span-1 row-span-2",
-  },
+export const BACKEND_DATA: TechnologiesMeta[] = [
+  { id: "MongoDB", title: "MongoDB", color: "flame-400", icons: [SiMongodb], iconColor: "text-[#47A248]" },
+  { id: "Express", title: "Express", color: "flame-400", icons: [SiExpress], iconColor: "text-white", iconClassName: "stroke-[1.5]" },
+  { id: "Node.js", title: "Node.js", color: "flame-300", icons: [SiNodedotjs], iconColor: "text-[#5FA04E]" },
+  { id: "PostgreSQL", title: "PostgreSQL", color: "flame-300", icons: [SiPostgresql], iconColor: "text-[#4169E1]", iconClassName: "stroke-[1.5]" },
+];
 
-  // Herramientas y Sistema
-  {
-    id: "Linux CachyOS",
-    title: "Linux CachyOS",
-    color: "flame-500",
-    icons: [FaLinux, SiArchlinux],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "N8N",
-    title: "N8N",
-    color: "flame-500",
-    icons: [SiN8N],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "Figma",
-    title: "Figma",
-    color: "flame-500",
-    icons: [SiFigma],
-    gridSpan: "col-span-1 row-span-1",
-  },
-  {
-    id: "Adobe Illustrator",
-    title: "Adobe Illustrator",
-    color: "flame-500",
-    icons: [SiAdobeillustrator],
-    gridSpan: "col-span-1 row-span-1",
-  },
+export const ENVIRONMENT_DATA: TechnologiesMeta[] = [
+  { id: "Linux CachyOS", title: "Linux CachyOS", color: "flame-400", icons: [SiArchlinux, FaLinux], iconColor: "text-[#008080]", iconClassName: ["", "stroke-[1.5]"] },
+  { id: "N8N", title: "N8N", color: "flame-300", icons: [SiN8N], iconColor: "text-[#FF6584]", iconClassName: "stroke-[1.5]" },
+];
+
+export const DESIGN_DATA: TechnologiesMeta[] = [
+  { id: "Figma", title: "Figma", color: "flame-400", icons: [SiFigma], iconColor: "text-[#F24E1E]", iconClassName: "stroke-[1.5]" },
+  { id: "Adobe Illustrator", title: "Adobe Illustrator", color: "flame-300", imageSrc: "/svg/adbillustrator.svg", iconClassName: "scale-125 md:scale-125" },
 ];
